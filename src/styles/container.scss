@@ -1,0 +1,22 @@
+.columns {
+    display: flex;
+    align-items: flex-start;
+}
+
+.columns--2 {
+    gap: 3rem;
+
+    > * {
+        flex-basis: 40%;
+        flex-grow: 1;
+    }
+}
+
+.columns--4 {
+    gap: 3rem;
+
+    > * {
+        flex-basis: 20%;
+        flex-grow: 1;
+    }
+}

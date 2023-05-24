@@ -6,7 +6,9 @@ const Navigation = () => {
         <div className="navigation-wrapper">
             <nav className="navigation">
                 <div className="navigation__logo">
-                    <Logo/>
+                    <a href="/">
+                        <Logo/>
+                    </a>
                 </div>
                 <ul className="navigation__links">
                     <li><a href="#">News</a></li>

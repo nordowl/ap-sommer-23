@@ -78,12 +78,13 @@
 
 .swiper-pagination-bullet {
     position: relative;
-    width: 3rem;
+    width: 0.5rem;
     height: 0.5rem;
     background-color: $accent;
     border-radius: 10rem;
     overflow: hidden;
     cursor: pointer;
+    transition: width .5s;
 
     &::after {
         content: "";
@@ -97,6 +98,8 @@
 }
 
 .swiper-pagination-bullet-active {
+    width: 3rem;
+
     &::after {
         animation: progress 7s linear;
 

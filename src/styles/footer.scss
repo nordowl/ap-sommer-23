@@ -1,0 +1,19 @@
+.footer-wrapper {
+    padding: 2rem 0 4rem;
+    border-top: 1px solid $accent;
+    margin-top: 4rem;
+}
+
+footer {
+    max-width: $page-width;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    .logo {
+        max-width: 10rem;
+    }
+}
+
+footer li:nth-child(n+2) {
+    margin-top: 0.75rem;
+}

@@ -1,4 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import "./__variables.scss";
 
 @import "./globals.scss";
 @import "./navigation.scss";
+@import "./slider.scss";
+@import "./button.scss";

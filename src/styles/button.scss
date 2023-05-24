@@ -1,0 +1,23 @@
+.button {
+    padding: 0.75rem 1rem;
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform .1s 0s;
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+.button.button--primary {
+    background-color: $primary;
+    color: white;
+
+    &:hover {
+        background-color: darken($primary, 10%);
+    }
+}

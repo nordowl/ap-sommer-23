@@ -6,79 +6,91 @@ import Slide3 from "@/src/images/slide-3.webp"
 import Slide4 from "@/src/images/slide-4.webp"
 import Slide5 from "@/src/images/slide-5.webp"
 
-import { useState, useEffect } from "react"
-import { register } from "swiper/element/bundle"
+import Button from "./Button"
 import Image from "next/image"
+import { Navigation, Pagination, Autoplay } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
-
-register()
+import 'swiper/css'
+import 'swiper/css/navigation';
 
 const Slider = () => {
-
-    useEffect(()=> {
-        const swiperEl = document.querySelector('swiper-container');
-
-        swiperEl?.addEventListener('slidechange', (event) => {
-            console.log(event);
-        });
-    },[])
 
     const slides = [
         {
             img: Slide1,
             title: "Seepferdchen (5-10 Jahre)",
-            text: "Wir wollen nicht baden gehen. Wendig wie ein Seepferdchen im Wasser."
+            text: "Wir wollen nicht baden gehen. Wendig wie ein Seepferdchen im Wasser.",
+            btnText: "Jetzt Kurs buchen",
+            btnLink: "",
         },
         {
             img: Slide2,
             title: "Kindergeburtstag feiern",
-            text: "Wasservergnügen ohne Ende. Eine fröhliche Rutschpartie zum Kindergeburtstag."
+            text: "Wasservergnügen ohne Ende. Eine fröhliche Rutschpartie zum Kindergeburtstag.",
+            btnText: "Geburtstag anfragen",
+            btnLink: "",
         },
         {
             img: Slide3,
             title: "Jugend holt Silber",
-            text: "Wer tauchen kann, geht nicht unter. Silberstreif am Horizont."
+            text: "Wer tauchen kann, geht nicht unter. Silberstreif am Horizont.",
+            btnText: "Jetzt Kurs buchen",
+            btnLink: "",
         },
         {
             img: Slide4,
             title: "Filmnacht am Pool",
-            text: "Einfach gemeinsam abtauchen. Ein Familienvergnügen par excellence."
+            text: "Einfach gemeinsam abtauchen. Ein Familienvergnügen par excellence.",
+            btnText: "Jetzt reservieren",
+            btnLink: "",
         },
         {
             img: Slide5,
             title: "Aqua-Fitness für Erwachsene",
-            text: "Wer cool ist, scheut das Wasser nicht. Es muss nicht immer nur Schwimmen sein."
+            text: "Wer cool ist, scheut das Wasser nicht. Es muss nicht immer nur Schwimmen sein.",
+            btnText: "Kurse ansehen",
+            btnLink: "",
         },
     ]
 
     return (
-        <swiper-container
-            pagination={{
-                type: "progressbar"
-            }}
+        <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
             navigation
+            pagination={{
+                clickable: true,
+                type: "bullets"
+            }}
             loop
-            autoplay-delay="5000"
-            spaceBetween={64}
+            autoplay={{
+                delay: 6000,
+                disableOnInteraction: false
+            }}
+            spaceBetween={32}
             speed={1000}
-            draggable="false"
-            allowSlideNext="false"
-            allowSlidePrev="false"
-            allowTouchMove="false"
-            noSwiping="true"
+            slidesPerView={1.4}
+            centeredSlides={true}
+            draggable={false}
         >
             {slides.map(slide =>
-                <swiper-slide key={slide.title} style={{pointerEvents: "none"}}>
+                <SwiperSlide key={slide.title} style={{pointerEvents: "none"}}>
                     <div className="slide-image">
                         <Image src={slide.img} alt={slide.title}/>
                     </div>
                     <div className="slide-content">
                         <h2>{slide.title}</h2>
                         <p>{slide.text}</p>
+                        <div className="mt-4 button-wrapper">
+                            <Button
+                                primary
+                                label={slide.btnText}
+                                link={slide.btnLink}
+                            />
+                        </div>
                     </div>
-                </swiper-slide>
+                </SwiperSlide>
             )}
-        </swiper-container>
+        </Swiper>
     );
 }
  

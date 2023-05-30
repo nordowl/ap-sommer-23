@@ -1,0 +1,48 @@
+.gallery {
+    position: relative;
+    height: 88rem;
+}
+
+.gallery-img {
+    transition: all .3s;
+    position: absolute;
+    max-height: 36rem;
+    max-width: 32rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem rgba($color: white, $alpha: 0.5);
+
+    &:nth-child(1) {
+        scale: 0.8
+    }
+
+    &:nth-child(2) {
+        right: 0;
+        top: 5%;
+        scale: 0.7;
+        max-width: 36rem;
+    }
+
+    &:nth-child(3) {
+        right: 5%;
+        top: 37%;
+        z-index: 5;
+    }
+
+    &:nth-child(4) {
+        left: 5%;
+        top: 35%;
+        scale: 0.7;
+    }
+
+    &:nth-child(5) {
+        left: 20%;
+        top: 67%;
+        scale: 0.9;
+        max-height: 24rem;
+        max-width: 36rem;
+    }
+}

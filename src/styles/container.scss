@@ -20,3 +20,17 @@
         flex-grow: 1;
     }
 }
+
+.banner {
+    padding: 3rem;
+    background-color: $accent;
+    border-radius: 1rem;
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+
+    > * {
+        flex-basis: 40%;
+        flex-grow: 1;
+    }
+}

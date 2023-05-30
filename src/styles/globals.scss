@@ -34,17 +34,14 @@ h2 {
 a {
     font-weight: 600;
     color: $primary;
-    text-decoration: none;
 
     &.link {
         font-weight: bold;
         text-decoration: underline;
-        text-decoration-thickness: 2px;
-        color: lighten($primary, 20%);
     }
 
-    &:hover {
-        text-decoration: none;
+    &:hover:not(.navigation__links a:hover) {
+        color: lighten($primary, 20%);
     }
 }
 

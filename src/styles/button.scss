@@ -21,3 +21,34 @@
         background-color: lighten($primary, 20%);
     }
 }
+
+.arrow-link {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 0.25rem;
+
+    svg {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(-100%, -50%);
+        transition: all .3s;
+    }
+
+    .label {
+        transition: all .3s;
+        transform: translateX(0px);
+        display: block;
+    }
+
+    &:hover {
+        svg {
+            transform: translate(0%, -50%); 
+        }
+
+        .label {
+            transform: translateX(32px);
+        }
+    }
+}

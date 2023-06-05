@@ -21,7 +21,7 @@ const Slider = () => {
             title: "Seepferdchen (5-10 Jahre)",
             text: "Wir wollen nicht baden gehen. Wendig wie ein Seepferdchen im Wasser.",
             btnText: "Jetzt Kurs buchen",
-            btnLink: "",
+            btnLink: "/kurse/seepferdchen",
         },
         {
             img: Slide2,

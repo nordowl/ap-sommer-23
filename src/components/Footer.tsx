@@ -15,12 +15,12 @@ const Footer = () => {
                 </div>
                 <ul>
                     <li><a href="#">News</a></li>
-                    <li><a href="">Angebote + Events</a></li>
-                    <li><a href="">Öffnungszeiten + Preise</a></li>
+                    <li><a href="/angebote-events">Angebote + Events</a></li>
+                    <li><a href="/oeffnungszeiten-preise">Öffnungszeiten + Preise</a></li>
                 </ul>
                 <ul>
-                    <li><a href="">Kontakt</a></li>
-                    <li><a href="">Impressum</a></li>
+                    <li><a href="/kontakt">Kontakt</a></li>
+                    <li><a href="/impressum">Impressum</a></li>
                     <li><a href="#">Datenschutz</a></li>
                 </ul>
             </footer>

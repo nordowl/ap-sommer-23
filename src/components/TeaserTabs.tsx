@@ -29,7 +29,7 @@ const TeaserTabs = () => {
             icon: <IconSwimming/>,
             title: "Schwimmkurse für Kinder und Erwachsene",
             btnText: "Preise ansehen",
-            btnLink: "",
+            btnLink: "/angebote-events",
             img: Img1,
         },
         {

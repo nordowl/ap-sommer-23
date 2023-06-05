@@ -40,12 +40,12 @@ const Page = () => {
                         <h2 className="mb-4">Angebote + Events</h2>
                         <Button
                             label="Alle Angebote ansehen"
-                            link=""
+                            link="/angebote-events"
                             primary
                         />
                     </div>
                     <div>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto laudantium alias eaque labore ea maxime asperiores natus magnam magni doloremque?</p>
+                        <p>Ermöglichen Sie sich und Ihrem Kind Freude und Sicherheit im nassen Element - von der Wassergewöhnung für die Allerkleinsten über das Seepferdchen-Abzeichen vor dem Schulanfang bis zur Wassergymnastik für die Älteren. Machen Sie sich und Ihre Kinder fit für die Wasserwelt. Wir bieten Schwimm- und Aquakurse für alle Altersgruppen und Klassen.</p>
                     </div>
                 </CtaBanner>
 

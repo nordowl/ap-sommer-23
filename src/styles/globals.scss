@@ -55,6 +55,22 @@ button, select, option, input, textarea {
     color: inherit;
 }
 
+label {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+select, option, input, textarea {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    background-color: $accent;
+
+    &:active, &:focus {
+        outline: 2px solid $primary;
+    }
+}
+
 button {
     font-weight: bold;
 }

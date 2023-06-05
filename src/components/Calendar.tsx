@@ -1,6 +1,7 @@
 "use client"
 
 import { ReactNode, useEffect, useState } from "react"
+import { useRouter } from "next/navigation"
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react"
 import clsx from "clsx"
 
@@ -14,7 +15,6 @@ interface Calendar {
             isStart?: boolean
             isEnd?: boolean
             info: string | ReactNode
-            onClickDay: (e?: any) => void
             border?: "blue" | "yellow" | "orange"
         }[]
     }[],
@@ -31,6 +31,8 @@ const Calendar = ({
 
     const [activeMonth, setActiveMonth] = useState(0)
     const [today, setToday] = useState(0)
+
+    const router = useRouter()
 
     useEffect(()=> {
         setToday(new Date().getDate())
@@ -70,11 +72,11 @@ const Calendar = ({
                             <h5>{month.name}</h5>
                             <div className={clsx(
                                 "calendar__button",
-                                activeMonth == months.length || months.length <= 1 && "disabled"
+                                activeMonth == months.length - 1 && "disabled"
                             )}>
                                 <IconChevronRight
                                     onClick={()=> {
-                                        if (activeMonth < month.range && months.length > 1) {
+                                        if (activeMonth !== months.length - 1) {
                                             setActiveMonth(c => c + 1)
                                         }
                                     }}
@@ -115,7 +117,7 @@ const Calendar = ({
                                                     dayInfo.border == "orange" && "is-orange",
                                                     dayInfo.border == "yellow" && "is-yellow",
                                                 )}
-                                                onClick={day >= today ? dayInfo.onClickDay : undefined}
+                                                onClick={day >= today ? ()=> router.push("/kurse/anmeldung") : undefined}
                                             >
                                                 {dayInfo.info}
                                             </div>

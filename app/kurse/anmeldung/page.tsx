@@ -63,6 +63,7 @@ const Page = () => {
                     label="Jetzt verbindlich buchen"
                     primary
                     className="mt-8"
+                    type="submit"
                 />
             </form>
         </section>

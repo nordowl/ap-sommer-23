@@ -59,6 +59,10 @@ button, select, option, input, textarea {
     color: inherit;
 }
 
+option {
+    font-family: sans-serif;
+}
+
 label {
     display: block;
     margin-bottom: 0.25rem;

@@ -16,6 +16,10 @@ section {
     max-width: $page-width;
     margin: 0 auto;
     padding: 3rem 1rem;
+
+    &.narrow {
+        max-width: $page-width-narrow;
+    }
 }
 
 h1, h2, h3, h4 {
@@ -65,6 +69,7 @@ select, option, input, textarea {
     padding: 0.5rem 0.75rem;
     border-radius: 0.25rem;
     background-color: $accent;
+    width: 100%;
 
     &:active, &:focus {
         outline: 2px solid $primary;

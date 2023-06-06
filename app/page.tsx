@@ -8,10 +8,6 @@ import { Metadata } from "next";
 import { ParallaxProvider } from 'react-scroll-parallax';
 import Button from "@/src/components/Button";
 
-export const metadata: Metadata = {
-    title: "Schwimmspaß Freibad und Schwimmhalle | Badespaß in Wasserland"
-}
-
 const Page = () => {
     return (
         <ParallaxProvider>

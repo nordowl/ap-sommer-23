@@ -7,7 +7,8 @@ import { Metadata } from "next";
 import Footer from "@/src/components/Footer";
 
 export const metadata: Metadata = {
-    robots: { index: false, follow: false }
+    robots: { index: false, follow: false },
+    title: "Schwimmspaß Freibad und Schwimmhalle | Badespaß in Wasserland"
 }
 
 const RootLayout = ({children}: {children: ReactNode}) => {

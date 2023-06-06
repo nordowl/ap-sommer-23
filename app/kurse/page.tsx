@@ -1,9 +1,5 @@
-"use client"
-
-import { useRouter } from "next/navigation";
-
 const Page = () => {
-    return useRouter().push("/angebote-events")
+    return <div>404</div>
 }
  
 export default Page;

@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import Navigation from "@/src/components/Navigation";
 import { headingFont, bodyFont } from "@/src/fonts";
 import clsx from "clsx";
-import "@/src/styles/__styles.scss"
+import "@/public/styles/__styles.scss"
 import { Metadata } from "next";
 import Footer from "@/src/components/Footer";
 

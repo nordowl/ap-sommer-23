@@ -31,7 +31,7 @@ Anleitung:
 - Danach `npm run dev` ausführen
 
 #### Möglichkeit 3
-Die Website unter einer URL im Browser aufrufen:
+Die Website unter einer URL im Browser aufrufen: https://ap-sommer-23.vercel.app/
 
 ## Hinweise für die Prüfer*innen
 - Für diverse Angebote, wie zum Beispiel Schwimmkurse oder die Filmnacht, sollte ein Buchungsformular erstellt werden. Bei dieser Arbeit wurde ein "globales" Formular erstellt, wohin alle Buchungs-Buttons hin verlinken. Natürlich würde man in einem echten Szenario verschiedene Formulare für z.B. Filmnacht und Schwimmkurs benutzen - vor allem, weil sich die Felder unterscheiden - aber in diesem Fall wurde der Einfachkeit und Zeit halber ein einziges Formular erstellt.

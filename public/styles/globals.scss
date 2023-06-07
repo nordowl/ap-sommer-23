@@ -35,6 +35,12 @@ h2 {
     font-size: 1.5rem;
 }
 
+@media screen and (max-width: 1279px) {
+    h1 {
+        font-size: 2rem!important;
+    }
+}
+
 a {
     font-weight: 600;
     color: $primary;

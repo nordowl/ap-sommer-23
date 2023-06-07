@@ -4,7 +4,6 @@ import Slider from "@/src/components/Slider";
 import TeaserTabs from "@/src/components/TeaserTabs";
 import Gallery from "@/src/components/Gallery";
 import CtaBanner from "@/src/components/CtaBanner";
-import { Metadata } from "next";
 import { ParallaxProvider } from 'react-scroll-parallax';
 import Button from "@/src/components/Button";
 

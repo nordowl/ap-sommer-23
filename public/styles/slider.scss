@@ -122,6 +122,7 @@
 }
 
 .swiper-button-next, .swiper-button-prev {
+    transform: translateY(-50%);
     position: relative;
     width: 3rem!important;
     height: 3rem!important;
@@ -139,5 +140,47 @@
 
     &:active {
         scale: 0.9;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .slide-content h2 {
+        font-size: 2rem;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .slide-content h2 {
+        color: $primary;
+    }
+
+    .swiper-button-prev {
+        left: 1%!important;
+    }
+    
+    .swiper-button-next {
+        right: 1%!important;
+    }
+
+    .slide-content {
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 679px) {
+    .slide-content {
+        position: relative;
+        background-color: $accent;
+        max-width: 100%;
+        padding: 1rem 3.5rem 2rem 3.5rem;
+        left: initial;
+    }
+
+    .swiper-slide-active {
+    
+        .slide-content {
+            left: initial;
+        }
     }
 }

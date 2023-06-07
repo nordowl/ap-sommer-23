@@ -12,7 +12,7 @@ const Page = () => {
         text="Ermöglichen Sie sich und Ihrem Kind Freude und Sicherheit im nassen Element - von der Wassergewöhnung für die Allerkleinsten über das Seepferdchen-Abzeichen vor dem Schulanfang bis zur Wassergymnastik für die Älteren. Machen Sie sich und Ihre Kinder fit für die Wasserwelt. Wir bieten Schwimm- und Aquakurse für alle Altersgruppen und Klassen."
       />
       <section>
-        <div className="grid grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8 lg:gap-16 space-y-6 md:space-y-0">
           <div>
             <h2>I. Unsere Angebote für Kinder und Jugendliche</h2>
             <div className="mt-4">
@@ -40,7 +40,7 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-16 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8 lg:gap-16 space-y-6 md:space-y-0 mt-6">
           <div>
             <h2>III. Unsere Angebote für die ganze Familie</h2>
             <div className="mt-4">
@@ -66,7 +66,7 @@ const Page = () => {
         </div>
         <div className="mt-8">
           <h2>V. Unsere Angebote im Fitnessbereich</h2>
-          <div className="grid grid-cols-3 gap-16 mt-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-8 lg:gap-16 space-y-6 md:space-y-0 mt-6">
             <div>
               <ArrowLink link="/kurse/aqua-fitness" title="Aqua-Fitness" />
               <ArrowLink link="" title="Wasser-Rehabilitation" />

@@ -21,6 +21,17 @@
     }
 }
 
+@container (width < 1000px) {
+    .columns--2 {
+        gap: 3rem;
+    
+        > * {
+            flex-basis: 90%;
+            flex-grow: 1;
+        }
+    }
+}
+
 .banner {
     padding: 3rem;
     background-color: $accent;
@@ -43,7 +54,7 @@
 
     img {
         width: 100%;
-        height: 660px;
+        max-height: 660px;
     }
 }
 
@@ -72,6 +83,28 @@
     @keyframes enter {
         from { left: -40% }
         to { left: 0% }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .hero {
+        border-radius: 0;
+
+        img {
+            border-radius: 1rem;
+        }
+
+        h1 {
+            background: $gradient;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .hero__content {
+        position: relative;
+        max-width: 100%;
+        padding: 2rem 0 0;
     }
 }
 

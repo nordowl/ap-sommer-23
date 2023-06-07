@@ -8,6 +8,7 @@ import Slide5 from "@/public/images/slide-5.webp";
 
 import Button from "./Button";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import { Navigation, Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -52,6 +53,33 @@ const Slider = () => {
     },
   ];
 
+  const [slidesPerView, setSlidesPerView] = useState(1.4)
+
+  useEffect(()=> {
+    if (window.innerWidth <= 1023) {
+        setSlidesPerView(1.05)
+    }
+
+    window.addEventListener("resize", ()=> {
+        if (window.innerWidth <= 1023 && slidesPerView != 1.05) {
+            setSlidesPerView(1.05)
+        }
+        if (window.innerWidth > 1023 && slidesPerView == 1.05) {
+            setSlidesPerView(1.4)
+        }
+    });
+
+    return ()=> window.removeEventListener("resize", ()=> {
+        if (window.innerWidth <= 1023 && slidesPerView != 1.05) {
+            setSlidesPerView(1.05)
+        }
+        if (window.innerWidth > 1023 && slidesPerView == 1.05) {
+            setSlidesPerView(1.4)
+        }
+    });
+
+  }, [slidesPerView])
+
   return (
     <Swiper
       modules={[Navigation, Pagination, Autoplay]}
@@ -67,7 +95,7 @@ const Slider = () => {
       }}
       spaceBetween={32}
       speed={1000}
-      slidesPerView={1.4}
+      slidesPerView={slidesPerView}
       centeredSlides={true}
       draggable={false}
     >

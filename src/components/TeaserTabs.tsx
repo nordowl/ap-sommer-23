@@ -9,50 +9,50 @@ import Image from "next/image";
 import { Fragment, useEffect } from "react";
 
 const TeaserTabs = () => {
-  useEffect(() => {
-    if (window.innerWidth >= 800) {
-      const images = document.querySelectorAll(".teaser-tabs img");
-      document
-        .querySelector(".teaser-tabs")
-        ?.addEventListener("mousemove", (e: any) => {
-          const left = e.clientX;
-          const top = e.clientY;
-          images.forEach((img: any) => {
-            img.style.left = left + "px";
-            img.style.top = top + "px";
-          });
-        });
-    }
-  }, []);
+    useEffect(() => {
+        if (window.innerWidth >= 800) {
+        const images = document.querySelectorAll(".teaser-tabs img");
+        document
+            .querySelector(".teaser-tabs")
+            ?.addEventListener("mousemove", (e: any) => {
+            const left = e.clientX;
+            const top = e.clientY;
+            images.forEach((img: any) => {
+                img.style.left = left + "px";
+                img.style.top = top + "px";
+            });
+            });
+        }
+    }, []);
 
   const items = [
     {
-      icon: <IconSwimming />,
-      title: "Schwimmkurse für Kinder und Erwachsene",
-      btnText: "Preise ansehen",
-      btnLink: "/angebote-events",
-      img: Img1,
+        icon: <IconSwimming />,
+        title: "Schwimmkurse für Kinder und Erwachsene",
+        btnText: "Preise ansehen",
+        btnLink: "/angebote-events",
+        img: Img1,
     },
     {
-      icon: <IconPool />,
-      title: "Das Freibad mit Liegewiese ist von Mai bis Oktober geöffnet",
-      btnText: "Öffnungszeiten ansehen",
-      btnLink: "",
-      img: Img2,
+        icon: <IconPool />,
+        title: "Das Freibad mit Liegewiese ist von Mai bis Oktober geöffnet",
+        btnText: "Öffnungszeiten ansehen",
+        btnLink: "/oeffnungszeiten-preise",
+        img: Img2,
     },
     {
-      icon: <IconSwimming />,
-      title: "Aqua-Fitness-Angebote",
-      btnText: "Kurse entdecken",
-      btnLink: "",
-      img: Img3,
+        icon: <IconSwimming />,
+        title: "Aqua-Fitness-Angebote",
+        btnText: "Kurse entdecken",
+        btnLink: "/kurse/aqua-fitness",
+        img: Img3,
     },
     {
-      icon: <IconCalendarStar />,
-      title: "Spezielle Events für Groß und Klein. Bleiben Sie neugierig!",
-      btnText: "Jetzt Event planen",
-      btnLink: "",
-      img: Img4,
+        icon: <IconCalendarStar />,
+        title: "Spezielle Events für Groß und Klein. Bleiben Sie neugierig!",
+        btnText: "Jetzt Event planen",
+        btnLink: "/angebote-events/kindergeburtstag",
+        img: Img4,
     },
   ];
 

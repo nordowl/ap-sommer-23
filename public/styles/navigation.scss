@@ -40,7 +40,6 @@
 
 .navigation__burger {
     display: none;
-    padding: 0.5rem;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1079px) {
@@ -67,7 +66,7 @@
         position: absolute;
         flex-direction: column;
         background-color: white;
-        padding: 2rem 0.5rem;
+        padding: 2rem 1rem;
         z-index: 10;
         width: 100%;
         top: 6rem;

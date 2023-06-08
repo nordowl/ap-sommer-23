@@ -102,7 +102,7 @@
     width: 3rem;
 
     &::after {
-        animation: progress 11s linear;
+        animation: progress 9s linear;
 
         @keyframes progress {
             from { width: 0%; }

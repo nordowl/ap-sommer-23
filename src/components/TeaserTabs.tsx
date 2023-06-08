@@ -29,7 +29,7 @@ const TeaserTabs = () => {
     {
         icon: <IconSwimming />,
         title: "Schwimmkurse für Kinder und Erwachsene",
-        btnText: "Preise ansehen",
+        btnText: "Kurse ansehen",
         btnLink: "/angebote-events",
         img: Img1,
     },
@@ -59,7 +59,7 @@ const TeaserTabs = () => {
   return (
     <section>
       <h2>Wir bieten außerdem</h2>
-      <div className="columns columns--2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
         <div className="teaser-tabs">
           {items.map((item) => (
             <Fragment key={item.title}>

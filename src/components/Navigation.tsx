@@ -31,12 +31,12 @@ const Navigation = () => {
                     menuIsOpen && "is-open",
                     !menuIsOpen && "is-closed"
                 )}>
-                    <li><a href="#">News</a></li>
-                    <li><Link href="/angebote-events">Angebote + Events</Link></li>
-                    <li><Link href="/oeffnungszeiten-preise">Öffnungszeiten + Preise</Link></li>
-                    <li><Link href="/kontakt">Kontakt</Link></li>
-                    <li><Link href="/impressum">Impressum</Link></li>
-                    <li><a href="#">Datenschutz</a></li>
+                    <li onClick={()=> setOpen(false)}><a href="#">News</a></li>
+                    <li onClick={()=> setOpen(false)}><Link href="/angebote-events">Angebote + Events</Link></li>
+                    <li onClick={()=> setOpen(false)}><Link href="/oeffnungszeiten-preise">Öffnungszeiten + Preise</Link></li>
+                    <li onClick={()=> setOpen(false)}><Link href="/kontakt">Kontakt</Link></li>
+                    <li onClick={()=> setOpen(false)}><Link href="/impressum">Impressum</Link></li>
+                    <li onClick={()=> setOpen(false)}><a href="#">Datenschutz</a></li>
                 </ul>
             </nav>
         </div>

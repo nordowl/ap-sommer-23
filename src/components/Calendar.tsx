@@ -83,48 +83,49 @@ const Calendar = ({
                                 />
                             </div>
                         </div>
-                        <div className="calendar__weekdays">
-                            <div>Montag</div>
-                            <div>Dienstag</div>
-                            <div>Mittwoch</div>
-                            <div>Donnerstag</div>
-                            <div>Freitag</div>
-                            <div>Samstag</div>
-                            <div>Sonntag</div>
-                        </div>
-                        <div className="calendar__days">
-                            { daysToSkip?.map((skipDay, index) =>
-                                <div></div>
-                            )}
-                            { days.map((day, index) => {
-                                const dayInfo = month.bookableDays.find(d => d.day == index + 1)
-
-                                return (
-                                    <div
-                                        className={clsx(
-                                            "calendar__day",
-                                            today == day && "calendar__day--today"
-                                        )}
-                                        key={index}
-                                    >
-                                        <div className="day__label">{day}</div>
-                                        { dayInfo && (
-                                            <div
-                                                className={clsx(
-                                                    "day-info",
-                                                    day < today && "disabled",
-                                                    dayInfo.border == "blue" && "is-blue",
-                                                    dayInfo.border == "orange" && "is-orange",
-                                                    dayInfo.border == "yellow" && "is-yellow",
-                                                )}
-                                                onClick={day >= today ? ()=> router.push("/kurse/anmeldung") : undefined}
-                                            >
-                                                {dayInfo.info}
-                                            </div>
-                                        )}
-                                    </div>
-                                )
-                            })}
+                        <div className="overflow-auto">
+                            <div className="calendar__weekdays">
+                                <div>Montag</div>
+                                <div>Dienstag</div>
+                                <div>Mittwoch</div>
+                                <div>Donnerstag</div>
+                                <div>Freitag</div>
+                                <div>Samstag</div>
+                                <div>Sonntag</div>
+                            </div>
+                            <div className="calendar__days">
+                                { daysToSkip?.map((skipDay, index) =>
+                                    <div></div>
+                                )}
+                                { days.map((day, index) => {
+                                    const dayInfo = month.bookableDays.find(d => d.day == index + 1)
+                                    return (
+                                        <div
+                                            className={clsx(
+                                                "calendar__day",
+                                                today == day && "calendar__day--today"
+                                            )}
+                                            key={index}
+                                        >
+                                            <div className="day__label">{day}</div>
+                                            { dayInfo && (
+                                                <div
+                                                    className={clsx(
+                                                        "day-info",
+                                                        day < today && "disabled",
+                                                        dayInfo.border == "blue" && "is-blue",
+                                                        dayInfo.border == "orange" && "is-orange",
+                                                        dayInfo.border == "yellow" && "is-yellow",
+                                                    )}
+                                                    onClick={day >= today ? ()=> router.push("/kurse/anmeldung") : undefined}
+                                                >
+                                                    {dayInfo.info}
+                                                </div>
+                                            )}
+                                        </div>
+                                    )
+                                })}
+                            </div>
                         </div>
                     </div>
                 )

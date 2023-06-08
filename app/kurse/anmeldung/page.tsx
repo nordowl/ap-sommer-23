@@ -20,7 +20,7 @@ const Page = () => {
                     <p className="text-xl font-bold">EUR 64,-</p>
                 </div>
                 <p className="font-bold">Anzumeldene Person:</p>
-                <div className="flex gap-4 mt-4 mb-4">
+                <div className="flex flex-col sm:flex-row gap-4 mt-4 mb-4">
                     <div className="field">
                         <label htmlFor="vorname">Vorname</label>
                         <input type="text" name="vorname" id="vorname"/>
@@ -30,7 +30,7 @@ const Page = () => {
                         <input type="text" name="nachname" id="nachname"/>
                     </div>
                 </div>
-                <div className="flex gap-4 mt-4 mb-4">
+                <div className="flex flex-col sm:flex-row gap-4 mt-4 mb-4">
                     <div className="field">
                         <label htmlFor="strasse">Straße + Hausnummer</label>
                         <input type="text" name="strasse" id="strasse"/>
@@ -49,7 +49,7 @@ const Page = () => {
                     <input type="tel" name="telefon" id="telefon"/>
                 </div>
                 <p className="font-bold">Falls ein Elternteil ein Kind anmeldet, bitte Namen des Elternteils angeben:</p>
-                <div className="flex gap-4 mt-4">
+                <div className="flex flex-col sm:flex-row gap-4 mt-4">
                     <div className="field">
                         <label htmlFor="vorname-eltern">Vorname Elternteil</label>
                         <input type="text" name="vorname-eltern" id="vorname-eltern"/>

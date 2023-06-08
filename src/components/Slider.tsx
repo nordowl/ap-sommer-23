@@ -90,7 +90,7 @@ const Slider = () => {
       }}
       loop
       autoplay={{
-        delay: 10000,
+        delay: 8000,
         disableOnInteraction: false,
       }}
       spaceBetween={32}

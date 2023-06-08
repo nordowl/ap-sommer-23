@@ -14,9 +14,9 @@ const Page = () => {
                 <Slider/>
 
                 <section>
-                    <div className="columns columns--2 mt-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 md:mt-8">
                         <div>
-                            <h1>Schwimmspaß GmbH<br/>in Wasserland</h1>
+                            <h1 className="text-has-gradient-mobile">Schwimmspaß GmbH<br/>in Wasserland</h1>
                             <h5 className="mt-4 font-bold">Einfach gemeinsam abtauchen</h5>
                         </div>
                         <div className="mt-4">

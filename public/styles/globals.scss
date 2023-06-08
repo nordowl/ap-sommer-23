@@ -86,10 +86,28 @@ select, option, input, textarea {
     }
 }
 
+input[type=radio], input[type=checkbox] {
+    width: initial;
+}
+
 button {
     font-weight: bold;
 }
 
 img {
     display: block;
+}
+
+@media screen and (max-width: 679px) {
+    .text-has-gradient-mobile {
+        background: $gradient;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    section {
+        padding: 2rem 1rem;
+    }
 }

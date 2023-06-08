@@ -21,17 +21,6 @@
     }
 }
 
-@container (width < 1000px) {
-    .columns--2 {
-        gap: 3rem;
-    
-        > * {
-            flex-basis: 90%;
-            flex-grow: 1;
-        }
-    }
-}
-
 .banner {
     padding: 3rem;
     background-color: $accent;
@@ -110,4 +99,16 @@
 
 .field {
     width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    .banner {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    
+        > * {
+            flex-basis: 90%;
+        }
+    }
 }

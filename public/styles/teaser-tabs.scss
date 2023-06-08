@@ -1,6 +1,5 @@
 .teaser-tabs {
     position: relative;
-    max-width: 50%;
     margin-top: 2rem;
 
     
@@ -31,8 +30,8 @@
     border-radius: 99rem;
 
     svg {
-        width: 5em;
-        height: 5rem;
+        min-width: 5rem;
+        min-height: 5rem;
         background-color: $accent;
         padding: 1rem;
         border-radius: 99rem;
@@ -62,4 +61,20 @@
     opacity: 1;
     pointer-events: none;
     transition: opacity .2s;
+
+    img {
+        border-radius: 1rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .teaser-tab + img {
+        display: none;
+    }
+
+    .teaser-tabs {
+        &:hover + .teaser-tabs-fallback-image {
+            opacity: 1;
+        }
+    }
 }

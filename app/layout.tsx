@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const RootLayout = ({children}: {children: ReactNode}) => {
     return (
-        <html>
+        <html className="by-JonasDahm@wigital">
             <head></head>
             <body className={clsx("schwimmspass", headingFont.variable, bodyFont.variable)}>
                 <Navigation/>
